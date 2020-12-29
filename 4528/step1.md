@@ -1,8 +1,14 @@
 ## Task
 
- Instalação e configuração do Prometheus:
+ ### Instalação e configuração do Prometheus
+
+Configuração de hostname:
 
  `hostnamectl set-hostname prometheus`{{execute}}
+
+ `sed -i '1s/$/ prometheus/' /etc/hosts`{{execute}}
+
+Instalação de pacotes:
 
 `yum install git ansible vim telnet -y`{{execute}}
 
