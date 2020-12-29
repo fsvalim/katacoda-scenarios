@@ -68,6 +68,9 @@ Após o Ansible finalizar a execução das instruções para instalação do Pro
 
 Use o endereço abaixo para acessar o PromDash:
 
+
+[Prometheus](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/)
+
 Render port 9090: https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
 
 Render port 80: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
