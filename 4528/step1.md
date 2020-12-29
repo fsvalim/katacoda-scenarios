@@ -10,9 +10,9 @@ Após finalizar a instalação dos pacotes vamos acessar o diretório do Ansible
 
 Em seguida vamos editar o arquivo de configuração do Ansible descomentando os parâmetros:
 
-```bash
- vim ansible.cfg
-```
+
+`vim ansible.cfg`{{execute}}
+
 
 ```
 host_key_checking = False
@@ -29,10 +29,7 @@ Para definir que o usuário remoto para conexão será sempre `root`.
 
 Ajustes feitos, vamos configurar o inventário do Ansible, primeiro vamos criar um grupo chamado `local`, esse grupo vai referenciar onde o Prometheus será instalado:
 
-
-```bash
- vim hosts
-```
+ `vim hosts`{{execute}}
 
 ```
 [local]
@@ -49,9 +46,8 @@ Agora vamos fazer um clone de um projeto que possui as instruções de instalaç
 Após finalizar o clone do projeto vamos criar a playbook que executará a role (tarefa) de instruções de instalação do Prometheus:
 
 
-```bash
- vim prometheus-playbook.yml
-```
+`vim prometheus-playbook.yml`{{execute}}
+
 
 ```yml
 ---
@@ -66,4 +62,4 @@ O arquivo `/etc/ansible/prometheus-playbook.yml` definirá a role que será exec
 
 Para executar as instruções como foram definidas no arquivo `prometheus-playbook.yml`, utilizamos o comando `ansible-playbook`:
 
-`ansible-playbook prometheus-playbook.yml`{{execute}}
+`ansible-playbook prometheus-playbook.yml --connection=local`{{execute}}
