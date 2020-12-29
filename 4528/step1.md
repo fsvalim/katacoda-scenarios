@@ -23,7 +23,6 @@ Vamos configurar o inventário do Ansible, primeiro vamos criar um grupo chamado
 127.0.0.1
 </pre>
 
-
 As configurações feitas no arquivo `/etc/ansible/hosts` definem em quais dispositivos o Ansible irá se conectar para aplicar as configurações, é comum criarmos um grupo para os endereços entre colchetes, assim como definimos em `[local]`.
 
 Agora vamos fazer um clone de um projeto que possui as instruções de instalação do Prometheus, esse projeto realizará a instalação de forma automática, para isso vamos executar o comando:
