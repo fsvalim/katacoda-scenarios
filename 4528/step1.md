@@ -19,8 +19,8 @@ Vamos configurar o inventário do Ansible, primeiro vamos criar um grupo chamado
  `vim hosts`{{execute}}
 
 <pre class="file" data-target="clipboard">
-`[local]
-127.0.0.1`
+[local]
+127.0.0.1
 </pre>
 
 
@@ -37,12 +37,11 @@ Após finalizar o clone do projeto vamos criar a playbook que executará a role 
 `vim prometheus-playbook.yml`{{execute}}
 
 <pre class="file" data-target="clipboard">
-`
 ---
 - name: "Instalação do Prometheus"
   hosts: local
   roles:
-   - ansible-prometheus`
+   - ansible-prometheus
 </pre>
 
 O arquivo `/etc/ansible/prometheus-playbook.yml` definirá a role que será executada e onde ela será executada. Neste laboratório definimos que será executada a role `ansible-prometheus`, e que as instruções nessa role serão aplicadas a todos os hosts no grupo `local` (que só referencia o servidor `localhost`, ou seja, o próprio Prometheus).
