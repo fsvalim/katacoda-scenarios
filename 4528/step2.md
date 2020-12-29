@@ -13,4 +13,4 @@ Podemos também ocultar todas as informações e trazer apenas a versão do Prom
 
 ![image-06](./assets/06.png)
 
-Dessa forma estamos filtrando o campo `version` da métrica `prometheus_build_info`, o campo Expression é muito importante para construir expressões que serão utilizadas nos gráficos apresentados no Grafana.
+Dessa forma estamos filtrando o campo `version` da métrica `prometheus_build_info`, o campo Expression é muito importante para construir expressões que serão utilizadas nos gráficos posteriormente apresentados no Grafana.
