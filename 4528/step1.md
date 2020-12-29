@@ -8,26 +8,7 @@ Após finalizar a instalação dos pacotes vamos acessar o diretório do Ansible
 
 `cd /etc/ansible`{{execute}}
 
-Em seguida vamos editar o arquivo de configuração do Ansible descomentando apenas dois parâmetros:
-
-
-`vim ansible.cfg`{{execute}}
-
-
-```
-host_key_checking = False
-remote_user = root
-```
-
-As configurações aplicadas ao arquivo `/etc/ansible/ansible.cfg` são:
-
-`host_key_checking = False`
-Usado para se conectar via SSH, aceitando automaticamente o hash de identificação do dispositivo e armazenando em `~/.ssh/known_hosts`.
-
-`remote_user = root`
-Para definir que o usuário remoto para conexão será sempre `root`.
-
-Ajustes feitos, vamos configurar o inventário do Ansible, primeiro vamos criar um grupo chamado `local`, esse grupo vai referenciar onde o Prometheus será instalado:
+Vamos configurar o inventário do Ansible, primeiro vamos criar um grupo chamado `local` no final do arquivo, esse grupo vai referenciar onde o Prometheus será instalado:
 
  `vim hosts`{{execute}}
 
@@ -66,7 +47,7 @@ Para executar as instruções como foram definidas no arquivo `prometheus-playbo
 
 Após o Ansible finalizar a execução das instruções para instalação do Prometheus, é possível acessá-lo a partir da porta **9090**, as áreas da interface são basicamente para consulta de métricas e configurações. Toda configuração do Prometheus é aplicada em seu arquivo de configuração em `/etc/prometheus/prometheus.yml`.
 
-Clique no link abaixo para acessar o PromDash:
+Clique no link abaixo  ou apenas clique na aba `"Port 9090"` para acessar o PromDash:
 
 
 [Prometheus Website](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/)
