@@ -8,7 +8,7 @@ Após finalizar a instalação dos pacotes vamos acessar o diretório do Ansible
 
 `cd /etc/ansible`{{execute}}
 
-Em seguida vamos editar o arquivo de configuração do Ansible descomentando os parâmetros:
+Em seguida vamos editar o arquivo de configuração do Ansible descomentando apenas dois parâmetros:
 
 
 `vim ansible.cfg`{{execute}}
@@ -35,6 +35,11 @@ Ajustes feitos, vamos configurar o inventário do Ansible, primeiro vamos criar 
 [local]
 127.0.0.1
 ```
+
+`cat > hosts <<EOF
+[local]
+127.0.0.1
+EOF`{{execute}}
 
 As configurações feitas no arquivo `/etc/ansible/hosts` definem em quais dispositivos o Ansible irá se conectar para aplicar as configurações, é comum criarmos um grupo para os endereços entre colchetes, assim como definimos em `[local]`.
 
@@ -66,13 +71,7 @@ Para executar as instruções como foram definidas no arquivo `prometheus-playbo
 
 Após o Ansible finalizar a execução das instruções para instalação do Prometheus, é possível acessá-lo a partir da porta **9090**, as áreas da interface são basicamente para consulta de métricas e configurações. Toda configuração do Prometheus é aplicada em seu arquivo de configuração em `/etc/prometheus/prometheus.yml`.
 
-Use o endereço abaixo para acessar o PromDash:
+Clique no link abaixo para acessar o PromDash:
 
 
-[Prometheus](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/)
-
-Render port 9090: https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/
-
-Render port 80: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
-
-Display page allowing user to select port: https://[[HOST_SUBDOMAIN]]-[[KATACODA_HOST]].environments.katacoda.com/
+[Prometheus Website](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/)
