@@ -2,7 +2,9 @@
 
  Instalação e configuração do Prometheus:
 
-`yum install git ansible vim -y`{{execute}}
+ `hostnamectl set-hostname prometheus`{{execute}}
+
+`yum install git ansible vim telnet -y`{{execute}}
 
 Após finalizar a instalação dos pacotes vamos acessar o diretório do Ansible:
 
