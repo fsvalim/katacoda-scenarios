@@ -63,3 +63,9 @@ O arquivo `/etc/ansible/prometheus-playbook.yml` definirá a role que será exec
 Para executar as instruções como foram definidas no arquivo `prometheus-playbook.yml`, utilizamos o comando `ansible-playbook`:
 
 `ansible-playbook prometheus-playbook.yml --connection=local`{{execute}}
+
+Após o Ansible finalizar a execução das instruções para instalação do Prometheus, é possível acessá-lo a partir da porta **9090**, as áreas da interface são basicamente para consulta de métricas e configurações. Toda configuração do Prometheus é aplicada em seu arquivo de configuração em `/etc/prometheus/prometheus.yml`.
+
+Use o endereço abaixo para acessar o PromDash:
+
+<pre>https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com</pre>
