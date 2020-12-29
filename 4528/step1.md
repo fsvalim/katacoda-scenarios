@@ -1,6 +1,4 @@
-## Task
-
- ### Instalação e configuração do Prometheus
+### Instalação e configuração do Prometheus
 
 Configuração de hostname:
 
