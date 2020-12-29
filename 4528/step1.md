@@ -56,4 +56,4 @@ Após o Ansible finalizar a execução das instruções para instalação do Pro
 Clique no link abaixo  ou apenas clique na aba `"Port 9090"` para acessar o PromDash:
 
 
-[Prometheus Website](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/)
+[Prometheus Service](https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/)
