@@ -1,3 +1,3 @@
 # katacoda-scenarios
 
-View the examples at https://katacoda.com/scenario-examples
+View the examples at **https://katacoda.com/scenario-examples**
