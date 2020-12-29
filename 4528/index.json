@@ -21,7 +21,10 @@
       "text": "finish.md"
     }
   },
-  "environment": {
+  "environment": { "hideintro": true,
+    "showdashboard": true,
+    "dashboards": [{"name": "Prometheus Port 9090", "port": 9090},
+        {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com"}],
     "uilayout": "editor-terminal"
   },
   "backend": {
