@@ -2,7 +2,7 @@
 
  Instalação e configuração do Prometheus:
 
-`sudo yum install git ansible vim -y`{{execute}}
+`yum install git ansible vim -y`{{execute}}
 
 Após finalizar a instalação dos pacotes vamos acessar o diretório do Ansible:
 
@@ -36,12 +36,12 @@ As configurações feitas no arquivo `/etc/ansible/hosts` definem em quais dispo
 Agora vamos fazer um clone de um projeto que possui as instruções de instalação do Prometheus, esse projeto realizará a instalação de forma automática, para isso vamos executar o comando:
 
 
-`sudo git clone https://github.com/cloudalchemy/ansible-prometheus.git roles/ansible-prometheus `{{execute}}
+`git clone https://github.com/cloudalchemy/ansible-prometheus.git roles/ansible-prometheus `{{execute}}
 
 Após finalizar o clone do projeto vamos criar a playbook que executará a role (tarefa) de instruções de instalação do Prometheus:
 
 
-`sudo vim prometheus-playbook.yml`{{open}}
+`vim prometheus-playbook.yml`{{open}}
 
 ```yml
 ---
@@ -55,4 +55,4 @@ O arquivo `/etc/ansible/prometheus-playbook.yml` definirá a role que será exec
 
 Para executar as instruções como foram definidas no arquivo `prometheus-playbook.yml`, utilizamos o comando `ansible-playbook`:
 
-`sudo ansible-playbook prometheus-playbook.yml`{{execute}}
+`ansible-playbook prometheus-playbook.yml`{{execute}}
